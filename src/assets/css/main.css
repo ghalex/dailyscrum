@@ -1,0 +1,7 @@
+@import "./tailwind.css";
+
+body {
+  background-color: #ccc;
+}
+
+@tailwind utilities;
