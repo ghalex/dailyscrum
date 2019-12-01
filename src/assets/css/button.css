@@ -1,0 +1,101 @@
+/** Simple button. */
+.btn {
+  @apply shadow inline-flex items-center align-top bg-gray-700 border-gray-700 font-mono select-none border-2 text-gray-200 cursor-pointer px-10 h-10 text-gray-100 text-xs;
+  transition: all 0.5s ease;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:active {
+    opacity: 0.85;
+  }
+
+  &:disabled {
+    opacity: 0.9;
+    user-select: none;
+  }
+
+  html[data-theme="dark"] & {
+    @apply text-white;
+  }
+
+  &:hover:not(:disabled) {
+    @apply bg-gray-800 shadow-none;
+  }
+
+  & > svg:first-child {
+    @apply inline-block w-4 mr-2 fill-current;
+  }
+}
+
+/** Primary button. */
+.btn-primary {
+  @apply bg-indigo-700 border-indigo-700;
+
+  &:hover:not(:disabled) {
+    @apply bg-indigo-800;
+  }
+
+  &.btn-link,
+  &.btn-outlined {
+    @apply text-indigo-700;
+  }
+
+  &.btn-outlined:hover {
+    @apply bg-indigo-700 text-gray-200;
+  }
+}
+
+/** Success button. */
+.btn-success {
+  @apply bg-green-600 border-green-600;
+
+  &:hover:enabled {
+    @apply bg-green-700;
+  }
+
+  &.btn-link,
+  &.btn-outlined {
+    @apply text-green-700;
+  }
+
+  &.btn-outlined:hover {
+    @apply bg-green-700 text-gray-200;
+  }
+}
+
+/** Outlined button. */
+.btn-outlined {
+  @apply bg-transparent text-gray-700;
+
+  &:hover:not(:disabled) {
+    @apply text-gray-200;
+  }
+}
+
+.btn-link {
+  @apply border-0 bg-transparent shadow-none px-4;
+
+  &:hover:enabled {
+    @apply bg-transparent;
+    opacity: 0.8;
+  }
+}
+
+/** Buttons utilities */
+.btn-icon {
+  @apply px-3;
+
+  & > svg:first-child {
+    @apply mr-0;
+  }
+}
+
+.btn-small {
+  @apply h-8 text-xs;
+
+  & > svg:first-child {
+    @apply w-3;
+  }
+}

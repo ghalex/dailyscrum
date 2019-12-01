@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Droid Sans";
+  src: url("../fonts/droid-sans.woff2") format("woff2"),
+    url("../fonts/droid-sans.woff") format("woff");
+}
+
+h2,
+h3,
+h4 {
+  @apply font-sans text-gray-800 leading-normal flex items-center;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+
+  & > svg:first-child {
+    @apply inline-block w-5 mr-2 fill-current;
+    margin-top: 3px;
+  }
+}
+
+p {
+  @apply font-serif text-sm text-gray-700 leading-tight mt-2 mb-2;
+}
